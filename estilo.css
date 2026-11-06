@@ -1,0 +1,293 @@
+/* =================================================
+   ESTILOS PRINCIPAIS DO PORTAL - CSS EXTERNO
+   ================================================= */
+
+/* Faz padding e border entrarem no cálculo da largura (evita estouro do layout) */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Configuração geral do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+/* Estilização do cabeçalho */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #1f1f1f;
+    border-bottom: 2px solid #660000;
+}
+
+header h1 {
+    color: #ff4d4d;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Container principal de streaming */
+.container-streaming {
+    padding: 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* O aviso e o banner ocupam 100% da largura (uma linha cada) */
+.aviso-destaque,
+.hero-banner {
+    flex: 0 0 100%;
+}
+
+/* =================================================
+   BANNER HERO COM VÍDEO LOCAL DE FUNDO
+   ================================================= */
+.hero-banner {
+    position: relative;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    border-left: 6px solid #007acc;
+    background: url('imagens/20261128195549_1.webp') center / cover no-repeat;
+}
+
+.video-container-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.video-container-hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1; 
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+    background: rgba(20, 20, 20, 0.8);
+    padding: 25px;
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+}
+
+.hero-conteudo .badge {
+    background-color: #e50914;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Título do banner (agora <h2>; o único <h1> fica no cabeçalho) */
+.hero-conteudo h2 {
+    font-size: 2.2rem;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.hero-conteudo p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.hero-botoes button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: opacity 0.2s ease;
+}
+
+/* Retorno visual ao passar o mouse ou navegar pelo teclado */
+.hero-botoes button:hover {
+    opacity: 0.8;
+}
+
+.hero-botoes button:focus-visible {
+    outline: 2px solid #ff4d4d;
+    outline-offset: 2px;
+}
+
+.btn-play {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-info {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: #fff;
+}
+
+/* =================================================
+   ESTILOS DE CADA CATEGORIA USANDO IDs (EXIGÊNCIA DA TAREFA)
+   ================================================= */
+.fileira-categoria {
+    flex: 1 1 0;
+    min-width: 0;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+#secao-filmes {
+    border-top: 4px solid #e50914; /* Cor temática para Filmes */
+}
+
+#secao-musica {
+    border-top: 4px solid #1db954; /* Cor temática para Música */
+}
+
+#secao-games {
+    border-top: 4px solid #007acc; /* Cor temática para Games */
+}
+
+.fileira-categoria h2 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.fileira-categoria p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+    line-height: 1.4; 
+}
+
+/* =================================================
+   USO DE FLEXBOX PARA OS CARROSSÉIS / COLUNAS
+   ================================================= */
+.carrossel-container {
+    display: flex; 
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scroll-behavior: smooth;
+}
+
+.carrossel-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.carrossel-container::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+/* Classes para os itens individuais */
+.carrossel-item {
+    /* Os 3 cards dividem a largura da coluna, com mínimo de 100px (abaixo disso o carrossel rola) */
+    flex: 1 0 100px;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #111;
+}
+
+.carrossel-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+.carrossel-item:hover {
+    transform: scale(1.08);
+    z-index: 10;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 8px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* =================================================
+   LAYOUT RESPONSIVO: colunas empilhadas em telas estreitas
+   ================================================= */
+@media (max-width: 900px) {
+    .container-streaming {
+        padding: 20px;
+    }
+
+    .fileira-categoria {
+        flex: 1 1 100%;
+    }
+}
+
+/* =================================================
+   JANELA MODAL DO VÍDEO (necessária para o botão "Reproduzir")
+   ================================================= */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-conteudo {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+}
+
+.modal-conteudo video {
+    display: block;
+    width: 100%;
+}
+
+.fechar {
+    position: absolute;
+    top: -36px;
+    right: 0;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #151515;
+    color: #777;
+    font-size: 0.85rem;
+    border-top: 1px solid #222;
+}

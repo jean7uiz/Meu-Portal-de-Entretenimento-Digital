@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portal de Entretenimento Digital</title>
+
+    <!-- 1. Requisito: CSS Reset linkado antes do principal -->
+    <link rel="stylesheet" href="reset.css">
+
+    <!-- 2. Requisito: CSS Externo linkado -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- 3. Requisito: CSS Interno -->
+    <style>
+        /* Aviso de boas-vindas: cores harmonizadas com a paleta vermelho/cinza do portal */
+        .aviso-destaque {
+            background-color: #2a0d0d;
+            border: 1px dashed #ff4d4d;
+            color: #ffb3b3;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Único <h1> da página -->
+        <h1>Meu Portal de Entretenimento Digital</h1>
+        <!-- 4. Requisito: Exemplo de CSS Inline -->
+        <p style="color: #ff9999; font-style: italic;">Explore as principais novidades sobre cultura pop, tecnologia e multimédia.</p>
+    </header>
+
+    <main class="container-streaming">
+
+        <!-- Aviso estilizado por CSS Interno -->
+        <div class="aviso-destaque">
+            Bem-vindo ao portal! Utilize os carrosséis abaixo para navegar pelas categorias.
+        </div>
+
+        <!-- Banner Principal em Destaque -->
+        <section class="hero-banner">
+            <div class="video-container-hero">
+                <video autoplay muted loop playsinline poster="imagens/20261128195549_1.webp">
+                    <source src="The Legend of Zelda_ Ocarina of Time (Nintendo Switch 2) – Preparem-se.mp4" type="video/mp4">
+                    O seu navegador não suporta a reprodução de vídeos.
+                </video>
+            </div>
+
+            <div class="hero-conteudo">
+                <span class="badge">EM DESTAQUE</span>
+                <h2>The Legend of Zelda: Ocarina of Time</h2>
+                <p>Embarque na épica jornada de Link por Hyrule, cruze o tempo entre o passado e o futuro e derrote o malvado Ganondorf.</p>
+                <div class="hero-botoes">
+                    <button class="btn-play" onclick="abrirTrailer()">▶ Reproduzir</button>
+                    <button class="btn-info">ℹ Mais Informações</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 1: Filmes e Séries -->
+        <section class="fileira-categoria" id="secao-filmes">
+            <h2>Filmes e Séries</h2>
+            <p>Descobre os lançamentos mais aguardados do cinema e as séries que estão a dar que falar.</p>
+            <div class="carrossel-container">
+                <div class="carrossel-item">
+                    <img src="https://imgs.search.brave.com/tcmL0lyq6c5nZxg-2UoTNFXES_FK3BWQCQDm-pvvZzw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLm1l/dHJvaW1nLmNvbS92/ZnVEWGJ3dDd5V19O/ZHRKU0taTTBqNl9F/Z0dPaWlLUzJlaE0y/NFhnMEhZL3c6NjAw/L3E6ODUvZjp3ZWJw/L3BsYWluL2h0dHBz/Oi8vaW1hZ2VzLm1l/dHJvaW1nLmNvbS8y/MDI2LzA5L3Zpbmdh/ZG9yZXMtZW5jb3Jl/LmpwZw" alt="Imagem de divulgação do filme Vingadores: Ultimato">
+                    <div class="card-info">Vingadores: Ultimato</div>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://imgs.search.brave.com/FwsRr4h9nGa647l_BIwd4Usn8-18OaGQr2k_ur58GMw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk9EVTNOVE0y/TnpJdFpXWXhPUzAw/TXpReExUbGlOVE10/TkRGbU16ZzRZVGt4/TmpjNVhrRXlYa0Zx/Y0djQC5qcGc" alt="Pôster do filme Sonic 3">
+                    <div class="card-info">Sonic 3</div>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://imgs.search.brave.com/pkxJNka6IidKoRqEQDzZ1j8X4Y4AmCrprC3hquRveBc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dG9laS1hbmltLmNv/LmpwL3R2L2RpZ2lt/b25fYmVhdGJyZWFr/L2Fzc2V0cy9pbWcv/dG9wL2ltZ19tdjAx/LWVuLmpwZw" alt="Imagem de divulgação da série Digimon Beatbreak">
+                    <div class="card-info">Digimon Beatbreak</div>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://imgs.search.brave.com/uyPWABgzvjZP4p71IGHUarc-76Nqidd71HkGRM43uKE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvdGh1bWJu/YWlsL211c2hva3Ut/dGVuc2VpLWJhY2tn/cm91bmQtcG1lZHp0/bGFhNzQ4eTJtOC5q/cGc" alt="Imagem de divulgação da série Mushoku Tensei">
+                    <div class="card-info">Mushoku Tensei</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Música e Podcasts -->
+        <section class="fileira-categoria" id="secao-musica">
+            <h2>Música e Podcasts</h2>
+            <p>Acompanha os álbuns do momento, entrevistas exclusivas e os podcasts mais populares.</p>
+            <div class="carrossel-container">
+                <div class="carrossel-item">
+                    <img src="https://imgs.search.brave.com/-dTbrNjT3B1B3YaCTGoX-gFj0hHRNdgyUobMTtm5aI4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk1tWTNNV1U0/TjJJdFl6ZGpPUzAw/TTJVekxXSmtOalV0/TjJKaU5qSm1aVEl6/WkdNMFhrRXlYa0Zx/Y0djQC5qcGc" alt="Capa de divulgação da banda Skillet">
+                    <div class="card-info">Skillet</div>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://imgs.search.brave.com/TsDXENUUTXCRi7m01pRNeDb-zc7pn3C_UGAqeeH3axQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/YW5pbWUtb3Blbmlu/Zy1zb25nLXJpc2Ut/YnktbWFka2lkLXYw/LWFkb285ZnJ3aDBs/MjEucG5nP3dpZHRo/PTY0MCZjcm9wPXNt/YXJ0JmF1dG89d2Vi/cCZzPWIxZWY3Mjcw/ZGRmNWFlMTk1YzMy/Y2Q2ZGY1ODUxZGEx/YjEyODQ0OTM" alt="Capa da música Rise, de Mad Kid">
+                    <div class="card-info">Mad Kid</div>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://imgs.search.brave.com/cPfry_34uBVJaJcZd0YQLMircrgVrtDfeE9krp43OWc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTEy/ODc0NTE4L3B0L2Zv/dG8vbmV3LXlvcmst/bnktY29tcG9zZXIt/aGFucy16aW1tZXIt/YXR0ZW5kcy10aGUt/NjB0aC1hbm51YWwt/Z3JhbW15LWF3YXJk/cy1hdC1tYWRpc29u/LXNxdWFyZS1nYXJk/ZW4uanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPUdKcjQ5aXhU/Y1l4OXF6dUVzd0Uz/Y3lYRUNCVDFobXh4/blkzZURFNUQxWVk9" alt="Foto do compositor Hans Zimme">
+                    <div class="card-info">Hans Zimmer</div>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://imgs.search.brave.com/xdRKzq3X1BAFA9db7nzJHzX-boJ6_fe_f0F3JwxStF0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZ2VuaXVzLmNv/bS8wM2I2MzgyZmVk/MTZlMmI4NTA0YmMw/MDk0N2MwNzkxYy4x/MDAweDEwMDB4MS5w/bmc" alt="Foto do cantor Victor Borba">
+                    <div class="card-info">Victor Borba</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Games e Tecnologia -->
+        <section class="fileira-categoria" id="secao-games">
+            <h2>Games e Tecnologia</h2>
+            <p>Fique por dentro das novidades do mundo dos videojogos e inovações tecnológicas.</p>
+            <div class="carrossel-container">
+                <div class="carrossel-item">
+                    <img src="https://imgs.search.brave.com/_7oUmBAt9Te2FY9cI8O49UQ_LSFDvKsWeej6iaJ81Ac/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9taWNy/b2R1Y2tzLm9yZy9f/bmV4dC9pbWFnZT91/cmw9L3JvYm90cy9y/b2JvdC1jcmVhbS1s/aWdodC5qcGcmdz0z/ODQwJnE9OTA" alt="Imagem do projeto Microducks">
+                    <div class="card-info">Microducks</div>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://imgs.search.brave.com/BMI-QXJhkQ_cBWNYrpvS5Ktc6V7k6fVLYzw1TDs-G0c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jbGFz/c2ljLmV4YW1lLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Ni8xMC90ZXNsYS5q/cGc_aW1zPTc1MHgv/ZmlsdGVyczpxdWFs/aXR5KDg1KTpmb3Jt/YXQod2VicCk" alt="Foto do carro esportivo Tesla Roadster">
+                    <div class="card-info">Tesla Roadster</div>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://imgs.search.brave.com/Cz8RJYHN62bEQoazLZMJ8gzt5iNCRWqVi9M_PdZrUjE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtcHJkLmlnbmlt/Z3MuY29tLzIwMjYv/MDkvMDgvb290LWZp/YW5sLTE3ODg4Nzkx/NDExMjgucG5nP2Ny/b3A9MToxLHNtYXJ0/JmZvcm1hdD1qcGcm/YXV0bz13ZWJwJnF1/YWxpdHk9ODA" alt="Arte do jogo The Legend of Zelda: Ocarina of Time">
+                    <div class="card-info">Zelda: Ocarina of Time</div>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://imgs.search.brave.com/xhLzTGtE7enytK5-GC1Bj-qmShjv5DsZMQSqvzbrf_I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMtcHJkLmlnbmlt/Z3MuY29tLzIwMjYv/MDYvMDUvbW9uaHVu/YS0xNzgwNjk4NDIz/NzM1LmpwZz9jcm9w/PTE6MSxzbWFydCZm/b3JtYXQ9anBnJmF1/dG89d2VicCZxdWFs/aXR5PTgw" alt="Arte do jogo Monster Hunter Wilds: Ascendance">
+                    <div class="card-info">Monster Hunter Wilds: Ascendance</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Janela Modal do Vídeo Local -->
+    <div id="modal-video" class="modal" onclick="fecharTrailer()">
+        <div class="modal-conteudo" onclick="event.stopPropagation()">
+            <span class="fechar" onclick="fecharTrailer()">&times;</span>
+            <video id="video-player" controls>
+                <source src="The Legend of Zelda_ Ocarina of Time (Nintendo Switch 2) – Preparem-se.mp4" type="video/mp4">
+                O seu navegador não suporta a reprodução de vídeos.
+            </video>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Meu Portal de Entretenimento Digital. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script JavaScript para o Modal do Vídeo -->
+    <script>
+        function abrirTrailer() {
+            var modal = document.getElementById('modal-video');
+            var player = document.getElementById('video-player');
+            modal.style.display = "flex";
+            player.play();
+        }
+
+        function fecharTrailer() {
+            var modal = document.getElementById('modal-video');
+            var player = document.getElementById('video-player');
+            player.pause();
+            player.currentTime = 0;
+            modal.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
